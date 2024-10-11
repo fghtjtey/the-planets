@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+  }
+  body {
+    @apply font-spartan font-normal text-sm leading-6 text-white bg-primary bg-[url("./site-bg.svg")] 
+  }
+  h1 {
+    @apply font-normal text-80 font-antonio uppercase leading-[6.25rem]
+  }
+  h2 {
+    @apply font-normal font-antonio tracking-[1.5px]
+  }
+  h3 {
+    @apply font-bold text-xs tracking-[2.5px]
+  }
+  h4 {
+    @apply font-bold text-[0.688rem] tracking-[1px]
+  }
+}
+
+
+@layer components {
+  .main-container {
+    @apply w-full max-w-[1190px] ml-auto mr-auto pl-[4rem] pr-[2.5rem]
+  }
+}
