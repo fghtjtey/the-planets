@@ -2,8 +2,11 @@ import React from 'react'
 import Navbar from '../../layouts/Navbar/Navbar'
 import useFetch from '../../hooks/useFetch'
 import PlanetsInfo from '../../layouts/PlanetsInfo/PlanetsInfo'
+import { useState } from 'react'
 
 function Home() {
+
+  const[activePlanet, setActivePlanet] = useState("mercury")
 
   const {data, isPanding, error} = useFetch()
 
@@ -13,7 +16,7 @@ function Home() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar setActivePlanet={setActivePlanet}/>
       {data && <PlanetsInfo data={data}/>}
     </>
   )

@@ -27,6 +27,12 @@
 
 @layer components {
   .main-container {
-    @apply w-full max-w-[1190px] ml-auto mr-auto pl-[4rem] pr-[2.5rem]
+    @apply w-full max-w-[1190px] ml-auto mr-auto pl-[2.5rem] pr-[2.5rem]
+  }
+  .planets-info-item {
+    @apply text-xs font-bold border border-white20 py-3 px-7 cursor-pointer flex items-center gap-7
+  }
+  .planets-info-item span {
+    @apply font-normal
   }
 }

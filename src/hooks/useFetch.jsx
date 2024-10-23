@@ -3,22 +3,22 @@ import { useEffect, useState } from "react"
 
 function useFetch() {
     const [data, setData] = useState(null)
-    const [isPanding, setIsPanding] = useState(false)
+    const [isPanding, setIsPending] = useState(false)
     const [error, setError] = useState(false)
 
     async function getData() {
-        setIsPanding(true)
+        setIsPending(true)
         try {
-            const response = await fatch("http://localhost:3000/planets")
+            const response = await fetch("http://localhost:3000/planets")
             if(!response.ok) {
                 throw new Error("Ma'lumot noto'g'ri keldi!")
             }
              const data = await response.json()
              setData(data)
-             setIsPanding(false)
+             setIsPending(false)
         }catch(error) {
             setError(error.message)
-            setIsPanding(false)
+            setIsPending(false)
         }
     }
 
